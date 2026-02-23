@@ -1,0 +1,82 @@
+.contact {
+  max-width: 800px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.contact h1 {
+  font-size: 40px;
+  color: #814b16;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #6e5f5f;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #3b2f2f;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 2px solid #d6d1c8;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #fdfdfd;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #a67c52;
+  outline: none;
+  box-shadow: 0 0 8px rgba(166,124,82,0.3);
+}
+
+.send-button {
+  background: #a67c52;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.send-button:hover {
+  background: #814b16;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact {
+    padding: 20px;
+  }
+
+  .contact h1 {
+    font-size: 28px;
+  }
+
+  .send-button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

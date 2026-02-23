@@ -1,0 +1,93 @@
+.books {
+  padding: 60px 8%;
+}
+
+.books h1 {
+  font-size: 40px;
+  color: #814b16;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.books h2 {
+  font-size: 28px;
+  margin: 40px 0 20px;
+  color: #3b2f2f;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.book-card {
+  background: #fff;
+  border: 2px solid #d6d1c8;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+}
+
+.book-card img {
+  max-width: 200px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.book-card button {
+  background: #a67c52;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.book-card button:hover {
+  background: #814b16;
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .books h1 {
+    font-size: 32px;
+  }
+
+  .books h2 {
+    font-size: 24px;
+  }
+
+  .book-card img {
+    max-width: 160px;
+  }
+}
+@media (max-width: 480px) {
+  .books h1 {
+    font-size: 24px;
+  }
+
+  .books h2 {
+    font-size: 20px;
+  }
+
+  .book-card img {
+    max-width: 100px;
+  }
+
+  .book-card button {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
