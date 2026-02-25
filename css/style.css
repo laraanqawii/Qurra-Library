@@ -1,13 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
 body {
   font-family: 'Amiri', serif;
-  background:  #f8f5f0;
-  color:  #3b2f2f;
+  background: #f8f5f0;
+  color: #3b2f2f;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 section {
@@ -15,23 +16,23 @@ section {
 }
 
 
-/*header css*/ 
+/*header css*/
 header {
   background: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
 
   height: 90px;
   display: flex;
-  align-items: center; 
+  align-items: center;
   padding: 0 40px;
 }
 
 .logo {
-  width: 160px;
-  height: 200px;
+  width: 120px;
+  height: auto;
 }
 
 nav {
@@ -40,11 +41,13 @@ nav {
   align-items: center;
   padding: 20px 8%;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
 }
+
 nav a {
   text-decoration: none;
   font-weight: 700;
@@ -75,7 +78,7 @@ nav a:hover {
 
 .hero h1 {
   font-size: 65px;
-   color: #814b16;
+  color: #814b16;
   margin-bottom: 65px;
 }
 
@@ -87,29 +90,26 @@ nav a:hover {
 
 .sub-button {
   display: inline-block;
-  background:  #a67c52;
+  background: #a67c52;
   color: #000000;
   padding: 14px 35px;
   border-radius: 12px;
   font-size: 18px;
   transition: 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .sub-button:hover {
-  background: #814b16;;
+  background: #814b16;
+  ;
   transform: translateY(-4px);
 }
 
 .hero img {
-height: 600px;
-width: 500;
-  justify-content: flex-start;
-    border-radius: 20px;
-
-
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
-
 /* cards */
 .info-cards {
   display: grid;
@@ -119,11 +119,11 @@ width: 500;
 
 .card {
   background: #f8f5f0;
-   border: 2px solid #d6d1c8;
+  border: 2px solid #d6d1c8;
   padding: 35px 20px;
   text-align: center;
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
   transition: 0.3s ease;
   font-size: 18px;
 }
@@ -158,13 +158,13 @@ width: 500;
 .about img {
   width: 520px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 
 /*footer*/
 footer {
-  background:  #3b2f2f;
+  background: #3b2f2f;
   color: #fff;
   text-align: center;
   padding: 25px;
@@ -199,26 +199,27 @@ footer {
 }
 
 @media (max-width: 768px) {
+
   header {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
+    flex-direction: row; /* يضل صف */
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 20px;
   }
 
   nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    padding: 0;
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
   }
 
   nav a {
-    font-size: 18px;
+    font-size: 16px;
   }
+
 
   .hero {
     flex-direction: column;
@@ -259,38 +260,49 @@ footer {
   .about img {
     width: 90%;
   }
+  section {
+  padding: 50px 5%;
 }
+}
+
 
 @media (max-width: 480px) {
   nav a {
     font-size: 16px;
   }
 
-  .hero h1 {
-    font-size: 32px;
+  .logo {
+    width: 90px;
   }
 
-  .hero p {
-    font-size: 16px;
-  }
-
-  .sub-button {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-
-  .card {
-    font-size: 16px;
-    padding: 20px;
-  }
-
-  .about h2 {
-    font-size: 28px;
-  }
-
-  footer {
-    font-size: 12px;
-    padding: 15px;
-  }
+.hero h1 {
+  font-size: 32px;
 }
 
+.hero p {
+  font-size: 16px;
+}
+
+.sub-button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.card {
+  font-size: 16px;
+  padding: 20px;
+}
+
+.about h2 {
+  font-size: 28px;
+}
+
+footer {
+  font-size: 12px;
+  padding: 15px;
+}
+
+section {
+  padding: 40px 4%;
+}
+}
